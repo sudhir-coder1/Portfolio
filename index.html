@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudhir Kumar - Portfolio</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -42,11 +44,30 @@
     }
 
     footer {
-      background-color: #2c3e50;
+      background: linear-gradient(90deg, #2c3e50 60%, #2980b9 100%);
       color: white;
       text-align: center;
-      padding: 15px 0;
+      padding: 25px 0 10px 0;
       margin-top: 20px;
+      position: relative;
+    }
+
+    .footer-social {
+      margin-bottom: 10px;
+    }
+
+    .footer-social a {
+      color: #fff;
+      margin: 0 12px;
+      font-size: 1.5em;
+      transition: color 0.2s, transform 0.2s;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+
+    .footer-social a:hover {
+      color: #d0e6f7;
+      transform: scale(1.2);
     }
 
     h2 {
@@ -57,10 +78,105 @@
       padding-left: 20px;
     }
 
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+      padding-left: 0;
+      justify-content: center;
+    }
+
+    .skills-list li {
+      background: #ecf0f1;
+      border-radius: 8px;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      font-size: 1.1em;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+      transition: transform 0.2s;
+    }
+
+    .skills-list li i {
+      margin-right: 10px;
+      color: #2c3e50;
+      font-size: 1.3em;
+    }
+
+    .skills-list li:hover {
+      transform: scale(1.07);
+      background: #d0e6f7;
+    }
+
+    .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+      padding-left: 0;
+      justify-content: center;
+    }
+
+    .project-card {
+      background: #ecf0f1;
+      border-radius: 10px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 2px 10px rgba(44, 62, 80, 0.12);
+      transition: box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 4px 20px rgba(44, 62, 80, 0.18);
+    }
+
+    .project-card a {
+      margin-top: 10px;
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+
+    .contact-info a {
+      color: #2980b9;
+      text-decoration: none;
+      margin-left: 5px;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .skills-list,
+      .projects-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project-card {
+        width: 90%;
+      }
+
+      section {
+        margin: 10px;
+        padding: 10px;
       }
     }
   </style>
@@ -88,35 +204,58 @@
 
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>HTML & CSS</li><br>
-      <li>Python</li><br>
-      <li>JavaScript</li><br>
-      <li>Git & GitHub</li><br>
-      <li>AWS Cloud</li><br>
+    <ul class="skills-list">
+      <li><i class="fab fa-html5"></i>HTML & CSS</li>
+      <li><i class="fab fa-python"></i>Python</li>
+      <li><i class="fab fa-js"></i>JavaScript</li>
+      <li><i class="fab fa-git-alt"></i>Git & GitHub</li>
+      <li><i class="fab fa-aws"></i>AWS Cloud</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-
-      <li> Digital Clock (javascript) <a href="https://digitalclock-su.netlify.app/">Seen</a></li><br>
-      <li> Weather App (JavaScript) <a href="https://weatherapp-si.netlify.app/">Seen</a></li><br>
-
-      <li> Voting Eligibility Checker (Python) <a href="##">Coming Soon</a> </li><br>
-
+    <ul class="projects-list">
+      <li class="project-card">
+        <strong>Digital Clock (JavaScript)</strong>
+        <p>Live digital clock web app using JavaScript.</p>
+        <a href="https://digitalclock-su.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> View
+          Project</a>
+      </li>
+      <li class="project-card">
+        <strong>Weather App (JavaScript)</strong>
+        <p>Weather forecast app fetching live data.</p>
+        <a href="https://weatherapp-si.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> View
+          Project</a>
+      </li>
+      <li class="project-card">
+        <strong>Voting Eligibility Checker (Python)</strong>
+        <p>Check voting eligibility (Coming Soon).</p>
+        <a href="#">Coming Soon</a>
+      </li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p><strong>Email:</strong><a href="mailto:sudhirbind2702715@gmail.com">sudhirbind2702715@gmail.com</a> </p>
-    <p><strong>Phone:</strong><a href="tel:+919026002337">+91 9026002337</a><br></p>
-    <p><strong>github:</strong> <a href="https://github.com/sudhir-coder1">sudhir-coder1</a></p>
-
+    <div class="contact-info">
+      <span><i class="fas fa-envelope"></i> <strong>Email:</strong>
+        <a href="mailto:sudhirbind2702715@gmail.com">sudhirbind2702715@gmail.com</a>
+      </span>
+      <span><i class="fas fa-phone"></i> <strong>Phone:</strong>
+        <a href="tel:+919026002337">+91 9026002337</a>
+      </span>
+      <span><i class="fab fa-github"></i> <strong>GitHub:</strong>
+        <a href="https://github.com/sudhir-coder1" target="_blank">sudhir-coder1</a>
+      </span>
+    </div>
   </section>
   <footer>
+    <div class="footer-social">
+      <a href="mailto:sudhirbind2702715@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/sudhir-coder1" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="tel:+919026002337" title="Phone"><i class="fas fa-phone"></i></a>
+    </div>
     <p>© 2025 Sudhir Kumar | Portfolio</p>
   </footer>
 
