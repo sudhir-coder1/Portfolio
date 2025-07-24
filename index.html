@@ -22,7 +22,7 @@
     }
 
     header {
-       background: linear-gradient(90deg, #667eea 0%, #43cea2 100%) !important;
+      background: linear-gradient(90deg, #667eea 0%, #43cea2 100%) !important;
       color: #fff;
       padding: 30px 0;
       text-align: center;
@@ -198,27 +198,34 @@
       }
     }
 
-   
+
 
     .carousel-img {
-  width: 100%;
-  height: 440px;
-  object-fit: cover;
-}
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
 
-/* 🔽 Responsive height adjustments */
-@media (max-width: 768px) {
-  .carousel-img {
-    height: 280px;
-  }
-}
+    /* 🔽 Responsive height adjustments */
+    @media (max-width: 768px) {
+      .carousel-img {
+        height: 280px;
+      }
+    }
 
-@media (max-width: 480px) {
-  .carousel-img {
-    height: 200px;
-  }
-}
-
+    @media (max-width: 480px) {
+      .carousel-img {
+        height: 200px;
+      }
+    }
+    .sudhir {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
   </style>
 </head>
 
@@ -243,29 +250,33 @@
       Development. Passionate about building real-world projects.</b>
   </section>
 
-  <div class="container-fluid p-0">
-  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="1.webp" class="d-block w-100 carousel-img" alt="Slide 1">
+  <div class="sudhir" >
+    <div class="container-fluid p-0">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="1.webp" class="d-block w-100 carousel-img" alt="Slide 1">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="2.jpg" class="d-block w-100 carousel-img" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="3.avif" class="d-block w-100 carousel-img" alt="Slide 3">
+        </div>
       </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="2.jpg" class="d-block w-100 carousel-img" alt="Slide 2">
-      </div>
-      <div class="carousel-item">
-        <img src="3.avif" class="d-block w-100 carousel-img" alt="Slide 3">
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
-</div>
+  </div>
 
 
 
